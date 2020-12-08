@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/spage"
-    tools:context=".MainActivity" >
+    android:background="@drawable/logsign"
+    tools:context=".LogSign">
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/next2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
