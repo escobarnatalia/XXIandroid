@@ -8,22 +8,33 @@ import android.widget.Button;
 
 public class LogSign extends AppCompatActivity {
 
-    private Button next2;
+    private Button logbwbtn;
+    private Button signbwbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_sign);
 
-        next2=findViewById(R.id.next2);
+        logbwbtn =findViewById(R.id.logbwbtn);
+        signbwbtn=findViewById(R.id.signbwbtn);
 
 
 
-        next2.setOnClickListener(
+        logbwbtn.setOnClickListener(
                 (v) -> {
-                    Intent i = new Intent(this,Home.class);
+                    Intent i = new Intent(this,LogIn.class);
                     startActivity(i);
 
+                }
+
+
+        );
+
+        signbwbtn.setOnClickListener(
+                (v)->{
+                    Intent i = new Intent(this,SignIn.class);
+                    startActivity(i);
                 }
 
 
