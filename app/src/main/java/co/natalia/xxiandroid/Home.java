@@ -26,6 +26,7 @@ public class Home extends AppCompatActivity {
                 (v) -> {
                     Intent i = new Intent(this,Categories.class);
                     startActivity(i);
+                    finish();
 
 
                 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "261738957905",
+    "firebase_url": "https://xxi-database-default-rtdb.firebaseio.com",
+    "project_id": "xxi-database",
+    "storage_bucket": "xxi-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261738957905:android:4f60ddd8c2f10100effc70",
+        "android_client_info": {
+          "package_name": "co.natalia.xxiandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261738957905-jbm4eqi21h2t0v09dee1l8h3cctqtver.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDChVbifGxZ1icx0pLf9dHbu6QQXjV2pJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261738957905-jbm4eqi21h2t0v09dee1l8h3cctqtver.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
