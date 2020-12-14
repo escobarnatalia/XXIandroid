@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 public class Home extends AppCompatActivity {
 
     private Button womanbtn;
+    private Button profilebtn2;
 
 
 
@@ -20,6 +21,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         womanbtn = findViewById(R.id.womanbtn);
+        profilebtn2 = findViewById(R.id.profilebtn2);
 
 
         womanbtn.setOnClickListener(
@@ -27,8 +29,13 @@ public class Home extends AppCompatActivity {
                     Intent i = new Intent(this,Categories.class);
                     startActivity(i);
                     finish();
+                }
+        );
 
-
+        profilebtn2.setOnClickListener(
+                (v) -> {
+                    Intent p = new Intent(this, Profile.class);
+                    startActivity(p);
                 }
         );
     }
