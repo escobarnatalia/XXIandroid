@@ -1,9 +1,11 @@
 package co.natalia.xxiandroid;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,7 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity implements View.OnClickListener {
 
     private TextView usernameTx;
     private Button SignOffBtn;
@@ -31,6 +33,8 @@ public class Profile extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
+
+        SignOffBtn.setOnClickListener(this);
 
         recoverUser();
     }
@@ -54,6 +58,26 @@ public class Profile extends AppCompatActivity {
                     }
             );
 
+
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.SignOffBtn:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                        .setTitle("Cerrar sesión")
+                        .setMessage("¿Esta seguro que desea cerrar sesión?")
+                        .setNegativeButton("NO", (dialog,id) ->{
+                            dialog.dismiss();
+                        })
+                        .setPositiveButton("SI", (dialog, id) ->{
+                            auth.signOut();
+                            finish();
+                        });
+                        builder.show();
+                break;
 
         }
     }
