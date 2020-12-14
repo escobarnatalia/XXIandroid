@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
 
     private TextView usernameTx;
     private Button SignOffBtn;
+    private Button homebtn2;
     private FirebaseAuth auth;
     private FirebaseDatabase db;
     private AndroidUsers users;
@@ -35,6 +37,8 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
         db = FirebaseDatabase.getInstance();
 
         SignOffBtn.setOnClickListener(this);
+        homebtn2.setOnClickListener(this);
+
 
         recoverUser();
     }
@@ -78,6 +82,14 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
                         });
                         builder.show();
                 break;
+
+            case R.id.homebtn2:
+                Intent p = new Intent(this, Home.class);
+                startActivity(p);
+                finish();
+
+                break;
+
 
         }
     }

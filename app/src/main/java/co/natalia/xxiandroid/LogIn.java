@@ -30,7 +30,6 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         auth=FirebaseAuth.getInstance();
 
-
         /*Intent i = new Intent(this,Home.class);
         startActivity(i);*/
         loginbtn.setOnClickListener(this);

@@ -114,13 +114,14 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/search"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/SignOffBtn"
-            android:layout_width="26"
-            android:layout_height="26"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/signoff"

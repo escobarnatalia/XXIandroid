@@ -33,12 +33,14 @@ public class LogSign extends AppCompatActivity implements View.OnClickListener {
             case R.id.signbwbtn:
                 Intent i = new Intent(this, SignIn.class);
                 startActivity(i);
+                finish();
                 break;
 
 
             case R.id.logbwbtn:
                 Intent l = new Intent(this, LogIn.class);
                 startActivity(l);
+                finish();
 
                 break;
         }

@@ -36,6 +36,7 @@ public class Home extends AppCompatActivity {
                 (v) -> {
                     Intent p = new Intent(this, Profile.class);
                     startActivity(p);
+                    finish();
                 }
         );
     }
