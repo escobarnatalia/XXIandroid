@@ -1,26 +1,22 @@
 package co.natalia.xxiandroid;
 
+import android.util.Log;
+
 public class Product {
-private String id,name,size,price;
-private int quantity;
+private String name,price,productId,quantity,size;
 
     public Product() {
+
     }
 
-    public Product(String id, String name, String size, String price, int quantity) {
-        this.id = id;
+    public Product(String name, String price, String productId, String quantity, String size) {
+
         this.name = name;
-        this.size = size;
         this.price = price;
+        this.productId = productId;
         this.quantity = quantity;
-    }
+        this.size = size;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -31,14 +27,6 @@ private int quantity;
         this.name = name;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
     public String getPrice() {
         return price;
     }
@@ -47,12 +35,27 @@ private int quantity;
         this.price = price;
     }
 
-    public int getQuantity() {
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
 }

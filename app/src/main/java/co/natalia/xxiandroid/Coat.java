@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,8 +51,15 @@ public class Coat extends AppCompatActivity implements View.OnClickListener {
 
                         for (DataSnapshot child:data.getChildren()){
 
-                        Product product = data.getValue(Product.class);
+                           /* Object o = data.getValue(Object.class);
+                            if(o instanceof Product){
+                                Log.e("debug","no es product");
+                            }*/
+
+                        Product product = child.getValue(Product.class);
                         adapter.addProduct(product);
+
+
                     }
                     }
 
@@ -63,7 +72,13 @@ public class Coat extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        db.getReference().child("Current").child("branch").setValue("coats");
 
+
+    }
 
     @Override
     public void onClick(View v) {

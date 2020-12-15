@@ -1,5 +1,7 @@
 package co.natalia.xxiandroid;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ProductAdapter extends BaseAdapter {
+public class ProductAdapter extends BaseAdapter  {
 
     private ArrayList<Product> product;
 
@@ -40,6 +42,14 @@ public class ProductAdapter extends BaseAdapter {
 
         name.setText(product.get(i).getName());
         price.setText(""+product.get(i).getPrice());
+
+        row.setOnClickListener(
+                (v)->{
+                    Intent l = new Intent(viewGroup.getContext(),Car.class);
+                    l.putExtra("id",product.get(i).getProductId());
+                    viewGroup.getContext().startActivity(l);
+                }
+        );
 
         return row;
     }
