@@ -1,12 +1,32 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package co.natalia.xxiandroid.model;
 
+/*
+ * This class will represent each user of the Android nodo.
+ */
+
 public class AndroidUsers {
+
+    // -------------------------------------
+    // Atributtes
+    // -------------------------------------
     private String id;
     private String username;
     private String email;
     private String pass;
     private String passc;
 
+    // -------------------------------------
+    // Constructors
+    // -------------------------------------
     public AndroidUsers() {
     }
 
@@ -18,6 +38,9 @@ public class AndroidUsers {
         this.passc = passc;
     }
 
+    // -------------------------------------
+    // Getters and setters
+    // -------------------------------------
     public String getId() {
         return id;
     }

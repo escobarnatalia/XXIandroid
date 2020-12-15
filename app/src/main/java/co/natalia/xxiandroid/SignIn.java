@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,14 +21,26 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import co.natalia.xxiandroid.model.AndroidUsers;
-
+/*
+ * This class controls the screen where the user Sign In and save the data on the database.
+ */
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
-    private FirebaseDatabase db;
-    private FirebaseAuth auth;
+    // -------------------------------------
+    // XML references
+    //-------------------------------------
     private EditText username,email2,pass2,pass2c;
     private Button signinbtn;
 
+    // -------------------------------------
+    // Global Assets
+    // -------------------------------------
+    private FirebaseDatabase db;
+    private FirebaseAuth auth;
+
+    // -------------------------------------
+    // Android methods
+    // -------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,29 +94,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                                     }
                                 }
                         );
-
-                /*
-                Map<String,String> androidusers = new HashMap<>();
-                androidusers.put("id",id);
-                androidusers.put("username",username.getText().toString());
-                androidusers.put("email",email2.getText().toString());
-                androidusers.put("pass",pass2.getText().toString());
-                androidusers.put("pass2",pass2c.getText().toString());
-                */
-
-
-
-
-
-
-
-
-
-
-                break;
-
-
-
+            break;
         }
     }
 }

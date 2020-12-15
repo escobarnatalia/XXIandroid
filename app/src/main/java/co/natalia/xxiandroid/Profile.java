@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import androidx.annotation.NonNull;
@@ -17,15 +25,30 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import co.natalia.xxiandroid.model.AndroidUsers;
-
+/*
+ * This class shows the profile of the user with de data saved database.
+ */
 public class Profile extends AppCompatActivity implements View.OnClickListener {
 
+    // -------------------------------------
+    // XML references
+    //-------------------------------------
     private TextView usernameTx;
     private Button SignOffBtn;
     private Button homebtn2;
+    // -------------------------------------
+    // Global Assets
+    // -------------------------------------
     private FirebaseAuth auth;
     private FirebaseDatabase db;
+    // -------------------------------------
+    // XML references
+    // -------------------------------------
     private AndroidUsers users;
+
+    // -------------------------------------
+    // Android methods
+    // -------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,29 +67,6 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
 
 
         recoverUser();
-    }
-
-    private void recoverUser() {
-        if (auth.getCurrentUser() != null){
-            String id = auth.getCurrentUser().getUid();
-            db.getReference().child("androidUser").child(id).addListenerForSingleValueEvent(
-                    new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot snapshot) {
-                            users = snapshot.getValue(AndroidUsers.class);
-                            usernameTx.setText(users.getUsername());
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    }
-            );
-
-
-        }
     }
 
     @Override
@@ -92,6 +92,32 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
                 finish();
 
                 break;
+
+
+        }
+    }
+
+    // -------------------------------------
+    // Methods
+    // -------------------------------------
+    private void recoverUser() {
+        if (auth.getCurrentUser() != null){
+            String id = auth.getCurrentUser().getUid();
+            db.getReference().child("androidUser").child(id).addListenerForSingleValueEvent(
+                    new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot snapshot) {
+                            users = snapshot.getValue(AndroidUsers.class);
+                            usernameTx.setText(users.getUsername());
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    }
+            );
 
 
         }

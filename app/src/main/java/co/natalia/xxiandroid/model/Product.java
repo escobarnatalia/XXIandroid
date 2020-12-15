@@ -1,10 +1,31 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package co.natalia.xxiandroid.model;
 
 import android.util.Log;
 
-public class Product {
-private String name,price,productId,quantity,size;
+/*
+ * This class will represent each Product of the Android nodo.
+ */
 
+public class Product {
+
+    // -------------------------------------
+    // Atributtes
+    // -------------------------------------
+
+    private String name,price,productId,quantity,size;
+
+    // -------------------------------------
+    // Constructors
+    // -------------------------------------
     public Product() {
 
     }
@@ -19,6 +40,9 @@ private String name,price,productId,quantity,size;
 
     }
 
+    // -------------------------------------
+    // Getters and setters
+    // -------------------------------------
     public String getName() {
         return name;
     }

@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import androidx.annotation.NonNull;
@@ -20,16 +28,30 @@ import com.google.firebase.database.ValueEventListener;
 import co.natalia.xxiandroid.model.Product;
 import co.natalia.xxiandroid.model.Sale;
 
+/*
+ * This class shows the product that the user want buy of the Android nodo.
+ */
 public class Car extends AppCompatActivity implements View.OnClickListener {
 
+    // -------------------------------------
+    // XML references
+    // -------------------------------------
     private String currentbranch,currentid;
-    private FirebaseDatabase db;
+    // -------------------------------------
+    // XML references
+    //-------------------------------------
     private Product product;
     private Button cpurchase,backbtn;
     private EditText address,fname;
     private TextView title,price2,price3,size;
+    // -------------------------------------
+    // Global Assets
+    // -------------------------------------
+    private FirebaseDatabase db;
 
-
+    // -------------------------------------
+    // Android methods
+    // -------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

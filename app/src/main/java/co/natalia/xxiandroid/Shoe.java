@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import androidx.annotation.NonNull;
@@ -16,13 +24,26 @@ import com.google.firebase.database.ValueEventListener;
 
 import co.natalia.xxiandroid.model.Product;
 
+/*
+ * This class shows the shoes product available on the data base of the Android nodo.
+ */
 public class Shoe extends AppCompatActivity implements View.OnClickListener {
 
+    // -------------------------------------
+    // XML references
+    //-------------------------------------
     private GridView productList;
-    private ProductAdapter adapter;
     private Button profilebtn2, homebtn2;
-    private FirebaseDatabase db;
 
+    // -------------------------------------
+    // Global Assets
+    // -------------------------------------
+    private FirebaseDatabase db;
+    private ProductAdapter adapter;
+
+    // -------------------------------------
+    // Android methods
+    // -------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

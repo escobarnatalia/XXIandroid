@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import android.app.Activity;
@@ -13,10 +21,20 @@ import java.util.ArrayList;
 
 import co.natalia.xxiandroid.model.Product;
 
+/*
+ * This class will represent the product list on the screen.
+ */
+
 public class ProductAdapter extends BaseAdapter  {
 
+    // -------------------------------------
+    // Atributtes
+    // -------------------------------------
     private ArrayList<Product> product;
 
+    // -------------------------------------
+    // Methods
+    // -------------------------------------
     public ProductAdapter() {product = new ArrayList<>();}
 
     @Override

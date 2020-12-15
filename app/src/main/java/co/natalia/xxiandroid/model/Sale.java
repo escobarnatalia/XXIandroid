@@ -1,8 +1,28 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package co.natalia.xxiandroid.model;
 
+/*
+ * This class will represent each Sale of the Android nodo.
+ */
+
 public class Sale {
+
+    // -------------------------------------
+    // Atributtes
+    // -------------------------------------
     private String address,buyer,id,image,productId,productName,size,total;
 
+    // -------------------------------------
+    // Constructors
+    // -------------------------------------
     public Sale() {
     }
 
@@ -17,6 +37,9 @@ public class Sale {
         this.total = total;
     }
 
+    // -------------------------------------
+    // Getters and setters
+    // -------------------------------------
     public String getAddress() {
         return address;
     }

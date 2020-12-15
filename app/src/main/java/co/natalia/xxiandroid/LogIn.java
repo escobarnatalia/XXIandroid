@@ -1,3 +1,11 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @authors  Wilson Suarez, Natalia Escobar, Nicolás Penagos, Valentina Zapata
+ * wilsonst.suarez@hotmail.com
+ * nataliaescfer@gmail.com
+ * nicolas.penagosm98@gmail.com
+ * valentinazapataz0306@gmail.com
+ **~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 package co.natalia.xxiandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,14 +19,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-
+/*
+ * This class controls the screen where the user Log In with the data saved database.
+ */
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
+    // -------------------------------------
+    // XML references
+    //-------------------------------------
     private EditText email;
     private EditText pass;
     private Button loginbtn;
+
+    // -------------------------------------
+    // Global Assets
+    // -------------------------------------
     private FirebaseAuth auth;
 
+    // -------------------------------------
+    // Android methods
+    // -------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
