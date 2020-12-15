@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -23,7 +24,7 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
     private FirebaseDatabase db;
     private Product product;
     private Button cpurchase,backarrow;
-    private EditText address;
+    private EditText address,fname;
     private TextView Title,price2,size;
 
 
@@ -37,6 +38,7 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
         cpurchase= findViewById(R.id.cpurchase);
         backarrow=findViewById(R.id.backarrow);
         address=findViewById(R.id.address);
+        fname=findViewById(R.id.fname);
         Title=findViewById(R.id.Title);
         price2=findViewById(R.id.price2);
         size=findViewById(R.id.size);
@@ -114,6 +116,9 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
                   int newq = Integer.parseInt(product.getQuantity())-1;
                   product.setQuantity(""+newq);
                   db.getReference().child("products").child(currentbranch).child(product.getProductId()).setValue(product);
+                    DatabaseReference ref = db.getReference().child("sales").push();
+                     Sale sale = new Sale(address.getText().toString(),fname.getText().toString(),ref.getKey(),"",product.getProductId(),product.getName(),product.getSize(),product.getPrice());
+                     ref.setValue(sale);
                     Toast.makeText(this,"La compra fue EXITOSA!",Toast.LENGTH_SHORT).show();
                     Intent p = new Intent(this, Home.class);
                     startActivity(p);
