@@ -10,8 +10,9 @@ import android.widget.ImageButton;
 
 public class Categories extends AppCompatActivity implements View.OnClickListener {
 
-    private Button profilebtn2;
-    private Button homebtn2;
+    private Button profilebtn2,homebtn2,coatbtn;
+
+
 
 
     @Override
@@ -21,9 +22,11 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
 
         profilebtn2=findViewById(R.id.profilebtn2);
         homebtn2=findViewById(R.id.homebtn2);
+        coatbtn=findViewById(R.id.coatbtn);
 
         homebtn2.setOnClickListener(this);
         profilebtn2.setOnClickListener(this);
+        coatbtn.setOnClickListener(this);
 
     }
 
@@ -42,6 +45,13 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
                 Intent i = new Intent(this, Profile.class);
                 startActivity(i);
                 finish();
+                break;
+
+            case R.id.coatbtn:
+                Intent l = new Intent(this, Coat.class);
+                startActivity(l);
+                finish();
+                break;
 
 
 

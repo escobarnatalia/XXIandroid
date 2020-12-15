@@ -32,6 +32,7 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
 
         usernameTx = findViewById(R.id.usernameTx);
         SignOffBtn = findViewById(R.id.SignOffBtn);
+        homebtn2 = findViewById(R.id.homebtn2);
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
