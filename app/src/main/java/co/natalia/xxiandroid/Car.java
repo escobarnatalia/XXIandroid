@@ -25,9 +25,9 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
     private String currentbranch,currentid;
     private FirebaseDatabase db;
     private Product product;
-    private Button cpurchase,backarrow;
+    private Button cpurchase,backbtn;
     private EditText address,fname;
-    private TextView Title,price2,size;
+    private TextView title,price2,price3,size;
 
 
     @Override
@@ -38,15 +38,17 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
         db = FirebaseDatabase.getInstance();
         currentid = getIntent().getExtras().getString("id");
         cpurchase= findViewById(R.id.cpurchase);
-        backarrow=findViewById(R.id.backarrow);
+        backbtn=findViewById(R.id.backbtn);
         address=findViewById(R.id.address);
         fname=findViewById(R.id.fname);
-        Title=findViewById(R.id.Title);
+        title=findViewById(R.id.title);
         price2=findViewById(R.id.price2);
+        price3=findViewById(R.id.price3);
         size=findViewById(R.id.size);
 
 
         cpurchase.setOnClickListener(this);
+        backbtn.setOnClickListener(this);
 
 
 
@@ -82,9 +84,10 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
 
                                         }
 
-                                        Title.setText(product.getName());
+                                        title.setText(product.getName());
                                         size.setText(product.getSize());
                                         price2.setText(product.getPrice());
+                                        price3.setText(product.getPrice());
 
 
                                     }
@@ -112,6 +115,13 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.backbtn:
+                Intent i = new Intent(this,Categories.class);
+                startActivity(i);
+                finish();
+
+                break;
+
             case R.id.cpurchase:
 
                 if(Integer.parseInt(product.getQuantity())>0){
@@ -132,16 +142,9 @@ public class Car extends AppCompatActivity implements View.OnClickListener {
                     finish();
                 }
 
-
-
                 break;
 
-            case R.id.backarrow:
-                Intent l = new Intent(this,Coat.class);
-                startActivity(l);
-                finish();
 
-                break;
 
     }
 }

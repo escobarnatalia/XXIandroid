@@ -6,11 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 public class Categories extends AppCompatActivity implements View.OnClickListener {
 
-    private Button profilebtn2,homebtn2,coatbtn;
+    private Button profilebtn2,homebtn2,coatbtn,jeanbtn,shoesbtn;
 
 
 
@@ -23,10 +22,14 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
         profilebtn2=findViewById(R.id.profilebtn2);
         homebtn2=findViewById(R.id.homebtn2);
         coatbtn=findViewById(R.id.coatbtn);
+        jeanbtn=findViewById(R.id.jeansbtn);
+        shoesbtn=findViewById(R.id.shoesbtn);
 
         homebtn2.setOnClickListener(this);
         profilebtn2.setOnClickListener(this);
         coatbtn.setOnClickListener(this);
+        jeanbtn.setOnClickListener(this);
+        shoesbtn.setOnClickListener(this);
 
     }
 
@@ -53,6 +56,17 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
                 finish();
                 break;
 
+            case R.id.shoesbtn:
+                Intent s = new Intent(this, Shoe.class);
+                startActivity(s);
+                finish();
+                break;
+
+            case R.id.jeansbtn:
+                Intent j = new Intent(this, Jean.class);
+                startActivity(j);
+                finish();
+                break;
 
 
 

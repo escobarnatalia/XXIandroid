@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Shoes"></activity>
+        <activity android:name=".Jean"></activity>
+        <activity android:name=".Shoe" />
         <activity android:name=".Car" />
         <activity android:name=".Coat" />
         <activity android:name=".Profile" />
