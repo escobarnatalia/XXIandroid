@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import co.natalia.xxiandroid.model.AndroidUsers;
+
 public class Profile extends AppCompatActivity implements View.OnClickListener {
 
     private TextView usernameTx;

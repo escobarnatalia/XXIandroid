@@ -1,4 +1,4 @@
-package co.natalia.xxiandroid;
+package co.natalia.xxiandroid.model;
 
 public class AndroidUsers {
     private String id;

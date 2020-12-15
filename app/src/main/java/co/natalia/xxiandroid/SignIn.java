@@ -10,12 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import co.natalia.xxiandroid.model.AndroidUsers;
 
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 

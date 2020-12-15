@@ -1,7 +1,7 @@
 package co.natalia.xxiandroid;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import co.natalia.xxiandroid.model.Product;
 
 public class ProductAdapter extends BaseAdapter  {
 
@@ -48,6 +50,7 @@ public class ProductAdapter extends BaseAdapter  {
                     Intent l = new Intent(viewGroup.getContext(),Car.class);
                     l.putExtra("id",product.get(i).getProductId());
                     viewGroup.getContext().startActivity(l);
+                    ((Activity)(viewGroup.getContext())).finish();
                 }
         );
 

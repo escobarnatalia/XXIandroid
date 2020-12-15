@@ -1,4 +1,4 @@
-package co.natalia.xxiandroid;
+package co.natalia.xxiandroid.model;
 
 public class Sale {
     private String address,buyer,id,image,productId,productName,size,total;

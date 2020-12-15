@@ -1,4 +1,4 @@
-package co.natalia.xxiandroid;
+package co.natalia.xxiandroid.model;
 
 import android.util.Log;
 
